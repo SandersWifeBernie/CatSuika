@@ -11,11 +11,37 @@ config_version=4
 [application]
 
 config/name="catSuika"
+run/main_scene="res://mainGame.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=1920
+window/size/height=1080
+
+[global]
+
+impoty=false
+import=false
 
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
+
+[layer_names]
+
+2d_physics/layer_1="default"
+2d_physics/layer_2="cherry"
+2d_physics/layer_3="strawberry"
+2d_physics/layer_4="grape"
+2d_physics/layer_5="orange"
+2d_physics/layer_6="perssiman"
+2d_physics/layer_7="apple"
+2d_physics/layer_8="pear"
+2d_physics/layer_9="peach"
+2d_physics/layer_10="pineapple"
+2d_physics/layer_11="melon"
+2d_physics/layer_12="watermelon"
 
 [physics]
 
