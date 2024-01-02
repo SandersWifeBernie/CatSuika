@@ -3,14 +3,33 @@ extends Node2D
 
 var cherryCollision
 var strawBerryCollision
+var boxOpen
+# pretty self explanatory this will be used as the score of the current run 
+var score 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	cherryCollision = 0
 	strawBerryCollision = 0 
+	boxOpen = false
+	score = 0
 
 func updateCherry():
 	cherryCollision = cherryCollision + 1
+
+func getScore():
+	return score 
+
+func setScore(val):
+	score = val
+
+func getBoxOpen():
+	return boxOpen
+
+
+func setBoxOpen(newVal):
+	boxOpen = newVal	
+
 
 func updateStrawBerry():
 	strawBerryCollision = strawBerryCollision + 1

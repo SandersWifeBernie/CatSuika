@@ -1,0 +1,460 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://art/COOPBL.TTF" type="DynamicFontData" id=1]
+[ext_resource path="res://art/text_bar.png" type="Texture" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 45
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 45
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 122
+font_data = ExtResource( 1 )
+
+[node name="nameEntry" type="Node"]
+
+[node name="GridContainer" type="GridContainer" parent="."]
+margin_left = 337.0
+margin_top = 152.0
+margin_right = 1625.0
+margin_bottom = 1061.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 6
+
+[node name="A" type="Button" parent="GridContainer"]
+margin_right = 212.0
+margin_bottom = 179.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/A"]
+margin_left = 74.0
+margin_top = 57.0
+margin_right = 136.0
+margin_bottom = 124.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "A"
+
+[node name="B" type="Button" parent="GridContainer"]
+margin_left = 216.0
+margin_right = 428.0
+margin_bottom = 179.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/B"]
+margin_left = 74.0
+margin_top = 57.0
+margin_right = 136.0
+margin_bottom = 124.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "B"
+
+[node name="C" type="Button" parent="GridContainer"]
+margin_left = 432.0
+margin_right = 643.0
+margin_bottom = 179.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/C"]
+margin_left = 74.0
+margin_top = 57.0
+margin_right = 136.0
+margin_bottom = 124.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "C"
+
+[node name="D" type="Button" parent="GridContainer"]
+margin_left = 647.0
+margin_right = 858.0
+margin_bottom = 179.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/D"]
+margin_left = 74.0
+margin_top = 57.0
+margin_right = 136.0
+margin_bottom = 124.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "D"
+
+[node name="E" type="Button" parent="GridContainer"]
+margin_left = 862.0
+margin_right = 1073.0
+margin_bottom = 179.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/E"]
+margin_left = 74.0
+margin_top = 57.0
+margin_right = 136.0
+margin_bottom = 124.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "E"
+
+[node name="F" type="Button" parent="GridContainer"]
+margin_left = 1077.0
+margin_right = 1288.0
+margin_bottom = 179.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/F"]
+margin_left = 74.0
+margin_top = 57.0
+margin_right = 136.0
+margin_bottom = 124.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "F"
+
+[node name="G" type="Button" parent="GridContainer"]
+margin_top = 183.0
+margin_right = 212.0
+margin_bottom = 362.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/G"]
+margin_left = 74.0
+margin_top = 57.0
+margin_right = 136.0
+margin_bottom = 124.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "G"
+
+[node name="H" type="Button" parent="GridContainer"]
+margin_left = 216.0
+margin_top = 183.0
+margin_right = 428.0
+margin_bottom = 362.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/H"]
+margin_left = 74.0
+margin_top = 57.0
+margin_right = 136.0
+margin_bottom = 124.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "H"
+
+[node name="I" type="Button" parent="GridContainer"]
+margin_left = 432.0
+margin_top = 183.0
+margin_right = 643.0
+margin_bottom = 362.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/I"]
+margin_left = 74.0
+margin_top = 57.0
+margin_right = 136.0
+margin_bottom = 124.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "I"
+
+[node name="J" type="Button" parent="GridContainer"]
+margin_left = 647.0
+margin_top = 183.0
+margin_right = 858.0
+margin_bottom = 362.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/J"]
+margin_left = 74.0
+margin_top = 57.0
+margin_right = 136.0
+margin_bottom = 124.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "J"
+
+[node name="K" type="Button" parent="GridContainer"]
+margin_left = 862.0
+margin_top = 183.0
+margin_right = 1073.0
+margin_bottom = 362.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/K"]
+margin_left = 74.0
+margin_top = 57.0
+margin_right = 136.0
+margin_bottom = 124.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "K"
+
+[node name="L" type="Button" parent="GridContainer"]
+margin_left = 1077.0
+margin_top = 183.0
+margin_right = 1288.0
+margin_bottom = 362.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/L"]
+margin_left = 74.0
+margin_top = 57.0
+margin_right = 136.0
+margin_bottom = 124.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "L"
+
+[node name="M" type="Button" parent="GridContainer"]
+margin_top = 366.0
+margin_right = 212.0
+margin_bottom = 545.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/M"]
+margin_left = 74.0
+margin_top = 57.0
+margin_right = 136.0
+margin_bottom = 124.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "M"
+
+[node name="N" type="Button" parent="GridContainer"]
+margin_left = 216.0
+margin_top = 366.0
+margin_right = 428.0
+margin_bottom = 545.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/N"]
+margin_left = 74.0
+margin_top = 57.0
+margin_right = 136.0
+margin_bottom = 124.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "N"
+
+[node name="O" type="Button" parent="GridContainer"]
+margin_left = 432.0
+margin_top = 366.0
+margin_right = 643.0
+margin_bottom = 545.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/O"]
+margin_left = 74.0
+margin_top = 57.0
+margin_right = 136.0
+margin_bottom = 124.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "O"
+
+[node name="P" type="Button" parent="GridContainer"]
+margin_left = 647.0
+margin_top = 366.0
+margin_right = 858.0
+margin_bottom = 545.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/P"]
+margin_left = 74.0
+margin_top = 57.0
+margin_right = 136.0
+margin_bottom = 124.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "P"
+
+[node name="Q" type="Button" parent="GridContainer"]
+margin_left = 862.0
+margin_top = 366.0
+margin_right = 1073.0
+margin_bottom = 545.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/Q"]
+margin_left = 74.0
+margin_top = 57.0
+margin_right = 136.0
+margin_bottom = 124.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "Q"
+
+[node name="R" type="Button" parent="GridContainer"]
+margin_left = 1077.0
+margin_top = 366.0
+margin_right = 1288.0
+margin_bottom = 545.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/R"]
+margin_left = 74.0
+margin_top = 57.0
+margin_right = 136.0
+margin_bottom = 124.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "R"
+
+[node name="S" type="Button" parent="GridContainer"]
+margin_top = 549.0
+margin_right = 212.0
+margin_bottom = 727.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/S"]
+margin_left = 74.0
+margin_top = 57.0
+margin_right = 136.0
+margin_bottom = 124.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "S"
+
+[node name="T" type="Button" parent="GridContainer"]
+margin_left = 216.0
+margin_top = 549.0
+margin_right = 428.0
+margin_bottom = 727.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/T"]
+margin_left = 74.0
+margin_top = 57.0
+margin_right = 136.0
+margin_bottom = 124.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "T"
+
+[node name="U" type="Button" parent="GridContainer"]
+margin_left = 432.0
+margin_top = 549.0
+margin_right = 643.0
+margin_bottom = 727.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/U"]
+margin_left = 74.0
+margin_top = 57.0
+margin_right = 136.0
+margin_bottom = 124.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "U"
+
+[node name="V" type="Button" parent="GridContainer"]
+margin_left = 647.0
+margin_top = 549.0
+margin_right = 858.0
+margin_bottom = 727.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/V"]
+margin_left = 74.0
+margin_top = 57.0
+margin_right = 136.0
+margin_bottom = 124.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "V"
+
+[node name="W" type="Button" parent="GridContainer"]
+margin_left = 862.0
+margin_top = 549.0
+margin_right = 1073.0
+margin_bottom = 727.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/W"]
+margin_left = 74.0
+margin_top = 57.0
+margin_right = 136.0
+margin_bottom = 124.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "W"
+
+[node name="X" type="Button" parent="GridContainer"]
+margin_left = 1077.0
+margin_top = 549.0
+margin_right = 1288.0
+margin_bottom = 727.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/X"]
+margin_left = 74.0
+margin_top = 57.0
+margin_right = 136.0
+margin_bottom = 124.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "X"
+
+[node name="Y" type="Button" parent="GridContainer"]
+margin_top = 731.0
+margin_right = 212.0
+margin_bottom = 909.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/Y"]
+margin_left = 74.0
+margin_top = 57.0
+margin_right = 136.0
+margin_bottom = 124.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "Y"
+
+[node name="Z" type="Button" parent="GridContainer"]
+margin_left = 216.0
+margin_top = 731.0
+margin_right = 428.0
+margin_bottom = 909.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/Z"]
+margin_left = 74.0
+margin_top = 57.0
+margin_right = 136.0
+margin_bottom = 124.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "Z"
+
+[node name="OK" type="Button" parent="GridContainer"]
+margin_left = 432.0
+margin_top = 731.0
+margin_right = 643.0
+margin_bottom = 909.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/OK"]
+margin_left = 64.0
+margin_top = 57.0
+margin_right = 148.0
+margin_bottom = 124.0
+custom_fonts/normal_font = SubResource( 2 )
+text = "OK"
+
+[node name="Name Space" type="RichTextLabel" parent="."]
+margin_left = 336.0
+margin_top = 7.0
+margin_right = 1611.0
+margin_bottom = 139.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 3 )
+text = "Hello"
+
+[node name="Sprite" type="Sprite" parent="Name Space"]
+show_behind_parent = true
+position = Vector2( 635, 67 )
+texture = ExtResource( 2 )

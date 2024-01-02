@@ -1,103 +1,30 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://cherry.tscn" type="PackedScene" id=1]
+[ext_resource path="res://dropper.tscn" type="PackedScene" id=1]
 [ext_resource path="res://box.tscn" type="PackedScene" id=2]
-[ext_resource path="res://strawberry.tscn" type="PackedScene" id=3]
-[ext_resource path="res://grape.tscn" type="PackedScene" id=4]
-[ext_resource path="res://orange.tscn" type="PackedScene" id=5]
-[ext_resource path="res://perssiman.tscn" type="PackedScene" id=6]
-[ext_resource path="res://apple.tscn" type="PackedScene" id=7]
-[ext_resource path="res://pear.tscn" type="PackedScene" id=8]
-[ext_resource path="res://peach.tscn" type="PackedScene" id=9]
-[ext_resource path="res://melon.tscn" type="PackedScene" id=10]
-[ext_resource path="res://pineapple.tscn" type="PackedScene" id=11]
-[ext_resource path="res://watermelon.tscn" type="PackedScene" id=12]
+[ext_resource path="res://mainGame.gd" type="Script" id=3]
+[ext_resource path="res://droppingArea.tscn" type="PackedScene" id=4]
+[ext_resource path="res://art/COOPBL.TTF" type="DynamicFontData" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 64
+font_data = ExtResource( 5 )
 
 [node name="mainGame" type="Node2D"]
+script = ExtResource( 3 )
 
 [node name="box" parent="." instance=ExtResource( 2 )]
 position = Vector2( 608, 277 )
 
-[node name="cherry" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1277, 770 )
+[node name="dropper" parent="." instance=ExtResource( 1 )]
+position = Vector2( 610, 151 )
 
-[node name="cherry2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1217, 782 )
+[node name="droppingArea" parent="." instance=ExtResource( 4 )]
+position = Vector2( 834, 285 )
 
-[node name="strawberry" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1136, 773 )
-
-[node name="strawberry2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1136, 670 )
-
-[node name="cherry3" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1240, 640 )
-
-[node name="strawberry3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1044, 350 )
-
-[node name="strawberry4" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1032, 752 )
-
-[node name="cherry4" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1250, 351 )
-
-[node name="grape" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1199, 722 )
-
-[node name="orange" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1085, 725 )
-
-[node name="perssiman" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1191, 573 )
-
-[node name="perssiman2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1297, 555 )
-
-[node name="apple" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1275, 696 )
-
-[node name="apple2" parent="." instance=ExtResource( 7 )]
-position = Vector2( 953, 758 )
-
-[node name="apple3" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1239, 483 )
-
-[node name="pear" parent="." instance=ExtResource( 8 )]
-position = Vector2( 1169, 336 )
-
-[node name="pear2" parent="." instance=ExtResource( 8 )]
-position = Vector2( 853, 757 )
-
-[node name="pear3" parent="." instance=ExtResource( 8 )]
-position = Vector2( 718, 575 )
-
-[node name="peach" parent="." instance=ExtResource( 9 )]
-position = Vector2( 1009, 609 )
-
-[node name="peach2" parent="." instance=ExtResource( 9 )]
-position = Vector2( 875, 658 )
-
-[node name="cherry5" parent="." instance=ExtResource( 1 )]
-position = Vector2( 868, 499 )
-
-[node name="perssiman3" parent="." instance=ExtResource( 6 )]
-position = Vector2( 797, 432 )
-
-[node name="melon" parent="." instance=ExtResource( 10 )]
-position = Vector2( 849, 306 )
-
-[node name="pineapple" parent="." instance=ExtResource( 11 )]
-position = Vector2( 964, 451 )
-
-[node name="melon2" parent="." instance=ExtResource( 10 )]
-position = Vector2( 766, 687 )
-
-[node name="melon3" parent="." instance=ExtResource( 10 )]
-position = Vector2( 925, 553 )
-
-[node name="watermelon" parent="." instance=ExtResource( 12 )]
-position = Vector2( 1260, 238 )
-
-[node name="watermelon2" parent="." instance=ExtResource( 12 )]
-position = Vector2( 1263, -40 )
+[node name="scoreDisplay" type="RichTextLabel" parent="."]
+margin_left = 99.0
+margin_top = 790.0
+margin_right = 493.0
+margin_bottom = 885.0
+custom_fonts/normal_font = SubResource( 1 )

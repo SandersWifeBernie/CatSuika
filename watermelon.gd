@@ -6,20 +6,19 @@ extends RigidBody2D
 # var b = "text"
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	$".".set_contact_monitor(true)
-	$".".set_max_contacts_reported(100) 
+	$".".set_max_contacts_reported(100)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
+func _process(delta):
+	if global_position.y < 250:
+		get_tree().change_scene("res://gameOver.tscn")
 
 func _on_watermelon_body_entered(body):
 	if body.get_collision_layer() == 2049:
+		# update score 
+		Global.setScore(Global.getScore() + 3000)
 		# simply delete the two watermelons
-		
 		body.queue_free()
 		self.queue_free()

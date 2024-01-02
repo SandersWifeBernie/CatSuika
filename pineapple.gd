@@ -12,9 +12,9 @@ func _ready():
 	$".".set_max_contacts_reported(100)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	if global_position.y < 250:
+		get_tree().change_scene("res://gameOver.tscn")
 
 
 func _on_pineapple_body_entered(body):
@@ -28,6 +28,7 @@ func _on_pineapple_body_entered(body):
 		var instance = scene.instance()
 		# we can add this to the current playing scene so that it will be destroyed at the right time 
 		get_tree().current_scene.add_child(instance)
+		Global.setScore(Global.getScore() + 730)
 		# once it's been added to the scene we need to set it to the proper coordinates 
 		instance.set_position(newPosition)
 		

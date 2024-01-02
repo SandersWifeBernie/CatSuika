@@ -6,16 +6,16 @@ extends RigidBody2D
 # var b = "text"
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
+	var dropZone = get_tree().current_scene.get_node("droppingArea")
+	dropZone.connect("body_entered", self, "_on_droppingArea_body_entered")
 	$".".set_contact_monitor(true)
 	$".".set_max_contacts_reported(100)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
+func _process(delta):
+	if global_position.y < 250:
+		get_tree().change_scene("res://gameOver.tscn")
 
 func _on_melon_body_entered(body):
 	if body.get_collision_layer() == 1025:
@@ -28,6 +28,7 @@ func _on_melon_body_entered(body):
 		var instance = scene.instance()
 		# we can add this to the current playing scene so that it will be destroyed at the right time 
 		get_tree().current_scene.add_child(instance)
+		Global.setScore(Global.getScore() + 1500)
 		# once it's been added to the scene we need to set it to the proper coordinates 
 		instance.set_position(newPosition)
 		
