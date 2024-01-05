@@ -15,7 +15,7 @@ func _ready():
 	
 # process is checked roughly every frame
 func _process(delta):
-	if self.isDropped == true and self.global_position.y < 221:
+	if self.isDropped == true and self.global_position.y < 220:
 		get_tree().change_scene("res://gameOver.tscn")
 
 

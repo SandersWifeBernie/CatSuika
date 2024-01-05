@@ -67,7 +67,7 @@ func _process(delta):
 		velocity.x = velocity.x + 1
 	# we got the direction of the vector now we want to get the length and normalize it 
 	
-	if Input.is_action_pressed("accept") and Global.getBoxOpen() == false:
+	if Input.is_action_just_pressed("accept") and Global.getBoxOpen() == false:
 		$".".get_node("bottom").disabled = true
 		Global.setBoxOpen(true)
 		isSpawn = true

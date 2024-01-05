@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/grape_test.png-078ed0f10a883df3ab1761458d5a8a96.stex"
+path="res://.import/persimmon_3.0.png-49e4d0aab90850a25c73327d1b69861d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/grape_test.png"
-dest_files=[ "res://.import/grape_test.png-078ed0f10a883df3ab1761458d5a8a96.stex" ]
+source_file="res://art/persimmon_3.0.png"
+dest_files=[ "res://.import/persimmon_3.0.png-49e4d0aab90850a25c73327d1b69861d.stex" ]
 
 [params]
 

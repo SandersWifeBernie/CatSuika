@@ -15,13 +15,12 @@ func _ready():
 	$".".set_max_contacts_reported(100) 
 
 func _process(delta):
-	if self.isDropped == true and self.global_position.y < 221:
+	if self.isDropped == true and self.global_position.y < 220:
 		print(self.global_position.y)
 		get_tree().change_scene("res://gameOver.tscn")
 
 func _on_droppingArea_body_entered(body):
 	self.count = self.count + 1
-	print("perssiman Collision! count = ", self.count, " isDropped = ", self.isDropped)
 	if self.isDropped == false and self.count == 1:
 		self.isDropped = true
 		Global.setBoxOpen(false)

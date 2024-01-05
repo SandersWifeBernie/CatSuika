@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cherry_test.jpg-cdc3f4f45fc312a617ed3493fae2a0be.stex"
+path="res://.import/closed_cursor.png-55556199a581ee131e5e7c13562e3308.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/cherry_test.jpg"
-dest_files=[ "res://.import/cherry_test.jpg-cdc3f4f45fc312a617ed3493fae2a0be.stex" ]
+source_file="res://art/closed_cursor.png"
+dest_files=[ "res://.import/closed_cursor.png-55556199a581ee131e5e7c13562e3308.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

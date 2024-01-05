@@ -13,7 +13,7 @@ func _ready():
 
 
 func _process(delta):
-	if global_position.y < 250:
+	if global_position.y < 220:
 		get_tree().change_scene("res://gameOver.tscn")
 
 func _on_peach_body_entered(body):

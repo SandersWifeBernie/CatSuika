@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/orange_test.png-a1bb9a17f37930028ff64ff8d05f4115.stex"
+path="res://.import/open_cursor.png-49b84b79b83b18657695dd013f6d6121.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/orange_test.png"
-dest_files=[ "res://.import/orange_test.png-a1bb9a17f37930028ff64ff8d05f4115.stex" ]
+source_file="res://art/open_cursor.png"
+dest_files=[ "res://.import/open_cursor.png-49b84b79b83b18657695dd013f6d6121.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

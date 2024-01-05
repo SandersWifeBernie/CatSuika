@@ -14,7 +14,7 @@ func _ready():
 	$".".set_max_contacts_reported(100) 
 
 func _process(delta):
-	if self.isDropped == true and self.global_position.y < 221:
+	if self.isDropped == true and self.global_position.y < 220:
 		print(self.global_position.y)
 		get_tree().change_scene("res://gameOver.tscn")
 

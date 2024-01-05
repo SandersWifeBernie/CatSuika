@@ -10,7 +10,7 @@ extends Node2D
 func _ready():
 	self.get_node("finalScore").set_text(String(Global.getScore()))
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	if Input.is_action_just_pressed("accept"):
+		get_tree().change_scene("res://nameEntry.tscn")

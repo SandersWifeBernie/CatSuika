@@ -1,12 +1,17 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://art/game_over.png" type="Texture" id=1]
 [ext_resource path="res://art/COOPBL.TTF" type="DynamicFontData" id=2]
 [ext_resource path="res://gameOver.gd" type="Script" id=3]
+[ext_resource path="res://art/MotleyForcesRegular-w1rZ3.ttf" type="DynamicFontData" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 150
 font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 64
+font_data = ExtResource( 4 )
 
 [node name="gameOver" type="Node2D"]
 script = ExtResource( 3 )
@@ -22,3 +27,13 @@ margin_right = 1979.0
 margin_bottom = 809.0
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 1 )
+scroll_active = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 402.0
+margin_top = 897.0
+margin_right = 1296.0
+margin_bottom = 1030.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 2 )
+text = "Press \"blue\" to continue"

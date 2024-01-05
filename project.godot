@@ -11,7 +11,8 @@ config_version=4
 [application]
 
 config/name="catSuika"
-run/main_scene="res://mainGame.tscn"
+run/main_scene="res://titleScreen.tscn"
+config/use_custom_user_dir=true
 config/icon="res://icon.png"
 
 [autoload]
@@ -90,3 +91,7 @@ quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
 environment/default_environment="res://default_env.tres"
+
+[user:]
+
+/=false
