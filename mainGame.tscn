@@ -24,7 +24,7 @@ position = Vector2( 608, 277 )
 position = Vector2( 610, 151 )
 
 [node name="droppingArea" parent="." instance=ExtResource( 4 )]
-position = Vector2( 834, 285 )
+position = Vector2( 835, 323 )
 
 [node name="scoreDisplay" type="RichTextLabel" parent="."]
 margin_left = 99.0

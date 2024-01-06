@@ -14,9 +14,11 @@ func _ready():
 	$".".set_max_contacts_reported(100) 
 
 func _process(delta):
-	if self.isDropped == true and self.global_position.y < 220:
+	if self.isDropped == true and self.global_position.y < 277:
 		print(self.global_position.y)
 		get_tree().change_scene("res://gameOver.tscn")
+	if self.global_position.y > 850:
+		Global.setBoxOpen(false)
 
 func _on_droppingArea_body_entered(body):
 	
@@ -24,6 +26,7 @@ func _on_droppingArea_body_entered(body):
 	if self.isDropped == false and self.count == 1:
 		self.isDropped = true
 		Global.setBoxOpen(false)
+		get_tree().current_scene.get_node("droppingArea").disconnect("body_entered", self, "_on_droppingArea_body_entered")
 		
 
 

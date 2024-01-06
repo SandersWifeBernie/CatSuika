@@ -12,7 +12,7 @@ func _ready():
 	$".".set_max_contacts_reported(100)
 
 func _process(delta):
-	if global_position.y < 220:
+	if global_position.y < 277:
 		get_tree().change_scene("res://gameOver.tscn")
 
 
