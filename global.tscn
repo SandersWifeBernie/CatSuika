@@ -1,6 +1,12 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://1al72jkkp0sh"]
 
-[ext_resource path="res://constants.gd" type="Script" id=1]
+[ext_resource type="Script" path="res://constants.gd" id="1"]
+[ext_resource type="AudioStream" uid="uid://dtba83thyenwp" path="res://music/Meow.mp3" id="2_owhgu"]
 
 [node name="global" type="Node2D"]
-script = ExtResource( 1 )
+script = ExtResource("1")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_owhgu")
+volume_db = -1.0
+autoplay = true

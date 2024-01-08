@@ -12,8 +12,8 @@ func _ready():
 	$".".set_max_contacts_reported(100)
 
 func _process(delta):
-	if global_position.y < 277:
-		get_tree().change_scene("res://gameOver.tscn")
+	if global_position.y < 150:
+		get_tree().change_scene_to_file("res://gameOver.tscn")
 
 
 
@@ -28,7 +28,7 @@ func _on_apple_body_entered(body):
 		#self.get_node("CollisionShape2D").disabled = true
 		#body.get_node("CollisionShape2D").disabled = true
 		var scene = load("res://pear.tscn")
-		var instance = scene.instance()
+		var instance = scene.instantiate()
 		# once we create a new instance we increment the cherry colli 
 		# we can add this to the current playing scene so that it will be destroyed at the right time 
 		get_tree().current_scene.add_child(instance)

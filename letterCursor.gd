@@ -1,58 +1,58 @@
 extends Node2D
 # first row of letters (I'll find a better way I swear)(maybe)
-var A = Vector2(429, 242)
-var B = Vector2(645, 242)
-var C = Vector2(861, 242)
-var D = Vector2(1077, 242)
-var E = Vector2(1293, 242)
-var F = Vector2(1509, 242)
+var A = Vector2(216, 158)
+var B = Vector2(293, 158)
+var C = Vector2(370, 158)
+var D = Vector2(447, 158)
+var E = Vector2(524, 158)
+var F = Vector2(601, 158)
 # second row
-var G = Vector2(429, 422)
-var H = Vector2(645, 422)
-var I = Vector2(861, 422)
-var J = Vector2(1077, 422)
-var K = Vector2(1293, 422)
-var L = Vector2(1509, 422)
+var G = Vector2(216, 245)
+var H = Vector2(293, 245)
+var I = Vector2(370, 245)
+var J = Vector2(447, 245)
+var K = Vector2(524, 245)
+var L = Vector2(601, 245)
 # third row 
-var M = Vector2(429, 602)
-var N = Vector2(645, 602)
-var O = Vector2(861, 602)
-var P = Vector2(1077, 602)
-var Q = Vector2(1293, 602)
-var R = Vector2(1509, 602)
+var M = Vector2(216, 332)
+var N = Vector2(293, 332)
+var O = Vector2(370, 332)
+var P = Vector2(447, 332)
+var Q = Vector2(524, 332)
+var R = Vector2(601, 332)
 # fourth row
-var S = Vector2(429, 782) 
-var T = Vector2(645, 782)
-var U = Vector2(861, 782)
-var V = Vector2(1077, 782)
-var W = Vector2(1293, 782)
-var X = Vector2(1509, 782)
+var S = Vector2(216, 419) 
+var T = Vector2(293, 419)
+var U = Vector2(370, 419)
+var V = Vector2(447, 419)
+var W = Vector2(524, 419)
+var X = Vector2(601, 419)
 # last row 
-var Y = Vector2(429, 962)
-var Z = Vector2(645, 962)
-var OK = Vector2(861, 962)
+var Y = Vector2(216, 506)
+var Z = Vector2(293, 506)
+var OK = Vector2(370, 506)
 
 var symbolNum = 1
 
 func _ready():
-	self.get_node("Area2D/AnimatedSprite").play("open")
+	self.get_node("Area2D/AnimatedSprite2D").play("open")
 
 func _process(delta):
 	# the following will define the "movement" of the cursor where it will move to different locations
 	# by incrementing the position, may use a velocity vector to make it more smooth later if I have time
 	# code for moving right, will only move right if you're not already at the right most cell  
-	if Input.is_action_just_pressed("right") and self.global_position.x < 1509:
-		self.global_position.x = self.global_position.x + 216
+	if Input.is_action_just_pressed("right") and self.global_position.x < 601:
+		self.global_position.x = self.global_position.x + 77
 	# code for moving left by one cell, will only go left if you're not already at the left most cell 
-	elif Input.is_action_just_pressed("left") and self.global_position.x > 429:
-		self.global_position.x = self.global_position.x - 216
+	elif Input.is_action_just_pressed("left") and self.global_position.x > 216:
+		self.global_position.x = self.global_position.x - 77
 	# code for moving up by one cell, remember that coordinate systems for y are backwards! 
 	# only moves up if it's not at the highest row
-	elif Input.is_action_just_pressed("up") and self.global_position.y > 242:
-		self.global_position.y = self.global_position.y - 180
+	elif Input.is_action_just_pressed("up") and self.global_position.y > 158:
+		self.global_position.y = self.global_position.y - 87
 	# code for moving down by one cell, only moves down if it's less then the coordinate of the lowest row 
-	elif Input.is_action_just_pressed("down") and self.global_position.y < 962:
-		self.global_position.y = self.global_position.y + 180
+	elif Input.is_action_just_pressed("down") and self.global_position.y < 506:
+		self.global_position.y = self.global_position.y + 87
 	# now this one will be a doozy, this will be used to determine what letter the area is hovering over
 	# gonna see if I can use a match statement and have different cases be vector2
 	elif Input.is_action_just_pressed("accept"):
@@ -162,7 +162,7 @@ func _process(delta):
 					Global.playerName = Global.playerName + "Z"
 					self.symbolNum = self.symbolNum + 1
 			OK:
-				get_tree().change_scene("res://leaderBoard.tscn")
+				get_tree().change_scene_to_file("res://leaderBoard.tscn")
 			_:
 				if self.symbolNum <= 6:
 					Global.playerName = Global.playerName + " "

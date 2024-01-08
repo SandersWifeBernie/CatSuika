@@ -1,468 +1,449 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=6 format=3 uid="uid://cajev0qhjrth7"]
 
-[ext_resource path="res://art/COOPBL.TTF" type="DynamicFontData" id=1]
-[ext_resource path="res://art/text_bar.png" type="Texture" id=2]
-[ext_resource path="res://letterCursor.tscn" type="PackedScene" id=3]
-[ext_resource path="res://nameEntry.gd" type="Script" id=4]
-
-[sub_resource type="DynamicFont" id=1]
-size = 45
-font_data = ExtResource( 1 )
-
-[sub_resource type="DynamicFont" id=2]
-size = 45
-font_data = ExtResource( 1 )
-
-[sub_resource type="DynamicFont" id=3]
-size = 122
-font_data = ExtResource( 1 )
+[ext_resource type="Texture2D" uid="uid://d0tg6ada7och2" path="res://art/text_bar.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://dqpt4jb2cd2ys" path="res://art/name_entry_screen.png" id="2_2whb3"]
+[ext_resource type="PackedScene" uid="uid://byxtggp5rhaaw" path="res://letterCursor.tscn" id="3"]
+[ext_resource type="FontFile" uid="uid://dd66u22iv8sfj" path="res://art/MotleyForcesRegular-w1rZ3.ttf" id="3_1rcl1"]
+[ext_resource type="Script" path="res://nameEntry.gd" id="4"]
 
 [node name="nameEntry" type="Node"]
-script = ExtResource( 4 )
+script = ExtResource("4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("2_2whb3")
 
 [node name="GridContainer" type="GridContainer" parent="."]
+anchors_preset = -1
 anchor_right = 0.291
-margin_left = 337.0
-margin_top = 152.0
-margin_right = 1046.28
-margin_bottom = 1036.0
+offset_left = 179.0
+offset_top = 116.0
+offset_right = 404.2
+offset_bottom = 546.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 columns = 6
 
 [node name="A" type="Button" parent="GridContainer"]
-margin_right = 208.0
-margin_bottom = 174.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_colors/icon_normal_color = Color(0.207843, 0.133333, 0.0313726, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/A"]
-margin_left = 74.0
-margin_top = 57.0
-margin_right = 136.0
-margin_bottom = 124.0
-custom_fonts/normal_font = SubResource( 1 )
+layout_mode = 0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 75.0
+offset_bottom = 77.0
+theme_override_fonts/normal_font = ExtResource("3_1rcl1")
+theme_override_font_sizes/normal_font_size = 80
 text = "A"
 
 [node name="B" type="Button" parent="GridContainer"]
-margin_left = 212.0
-margin_right = 420.0
-margin_bottom = 174.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/B"]
-margin_left = 74.0
-margin_top = 57.0
-margin_right = 136.0
-margin_bottom = 124.0
-custom_fonts/normal_font = SubResource( 1 )
+layout_mode = 0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 75.0
+offset_bottom = 77.0
+theme_override_fonts/normal_font = ExtResource("3_1rcl1")
+theme_override_font_sizes/normal_font_size = 80
 text = "B"
 
 [node name="C" type="Button" parent="GridContainer"]
-margin_left = 424.0
-margin_right = 632.0
-margin_bottom = 174.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/C"]
-margin_left = 74.0
-margin_top = 57.0
-margin_right = 136.0
-margin_bottom = 124.0
-custom_fonts/normal_font = SubResource( 1 )
+layout_mode = 0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 75.0
+offset_bottom = 77.0
+theme_override_fonts/normal_font = ExtResource("3_1rcl1")
+theme_override_font_sizes/normal_font_size = 80
 text = "C"
 
 [node name="D" type="Button" parent="GridContainer"]
-margin_left = 636.0
-margin_right = 844.0
-margin_bottom = 174.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/D"]
-margin_left = 74.0
-margin_top = 57.0
-margin_right = 136.0
-margin_bottom = 124.0
-custom_fonts/normal_font = SubResource( 1 )
+layout_mode = 0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 75.0
+offset_bottom = 77.0
+theme_override_fonts/normal_font = ExtResource("3_1rcl1")
+theme_override_font_sizes/normal_font_size = 80
 text = "D"
 
 [node name="E" type="Button" parent="GridContainer"]
-margin_left = 848.0
-margin_right = 1056.0
-margin_bottom = 174.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/E"]
-margin_left = 74.0
-margin_top = 57.0
-margin_right = 136.0
-margin_bottom = 124.0
-custom_fonts/normal_font = SubResource( 1 )
+layout_mode = 0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 75.0
+offset_bottom = 77.0
+theme_override_fonts/normal_font = ExtResource("3_1rcl1")
+theme_override_font_sizes/normal_font_size = 80
 text = "E"
 
 [node name="F" type="Button" parent="GridContainer"]
-margin_left = 1060.0
-margin_right = 1268.0
-margin_bottom = 174.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/F"]
-margin_left = 74.0
-margin_top = 57.0
-margin_right = 136.0
-margin_bottom = 124.0
-custom_fonts/normal_font = SubResource( 1 )
+layout_mode = 0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 75.0
+offset_bottom = 77.0
+theme_override_fonts/normal_font = ExtResource("3_1rcl1")
+theme_override_font_sizes/normal_font_size = 80
 text = "F"
 
 [node name="G" type="Button" parent="GridContainer"]
-margin_top = 178.0
-margin_right = 208.0
-margin_bottom = 352.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/G"]
-margin_left = 74.0
-margin_top = 57.0
-margin_right = 136.0
-margin_bottom = 124.0
-custom_fonts/normal_font = SubResource( 1 )
+layout_mode = 0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 75.0
+offset_bottom = 77.0
+theme_override_fonts/normal_font = ExtResource("3_1rcl1")
+theme_override_font_sizes/normal_font_size = 80
 text = "G"
 
 [node name="H" type="Button" parent="GridContainer"]
-margin_left = 212.0
-margin_top = 178.0
-margin_right = 420.0
-margin_bottom = 352.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/H"]
-margin_left = 74.0
-margin_top = 57.0
-margin_right = 136.0
-margin_bottom = 124.0
-custom_fonts/normal_font = SubResource( 1 )
+layout_mode = 0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 75.0
+offset_bottom = 77.0
+theme_override_fonts/normal_font = ExtResource("3_1rcl1")
+theme_override_font_sizes/normal_font_size = 80
 text = "H"
 
 [node name="I" type="Button" parent="GridContainer"]
-margin_left = 424.0
-margin_top = 178.0
-margin_right = 632.0
-margin_bottom = 352.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/I"]
-margin_left = 74.0
-margin_top = 57.0
-margin_right = 136.0
-margin_bottom = 124.0
-custom_fonts/normal_font = SubResource( 1 )
+layout_mode = 0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 75.0
+offset_bottom = 77.0
+theme_override_fonts/normal_font = ExtResource("3_1rcl1")
+theme_override_font_sizes/normal_font_size = 80
 text = "I"
 
 [node name="J" type="Button" parent="GridContainer"]
-margin_left = 636.0
-margin_top = 178.0
-margin_right = 844.0
-margin_bottom = 352.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/J"]
-margin_left = 74.0
-margin_top = 57.0
-margin_right = 136.0
-margin_bottom = 124.0
-custom_fonts/normal_font = SubResource( 1 )
+layout_mode = 0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 75.0
+offset_bottom = 77.0
+theme_override_fonts/normal_font = ExtResource("3_1rcl1")
+theme_override_font_sizes/normal_font_size = 80
 text = "J"
 
 [node name="K" type="Button" parent="GridContainer"]
-margin_left = 848.0
-margin_top = 178.0
-margin_right = 1056.0
-margin_bottom = 352.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/K"]
-margin_left = 74.0
-margin_top = 57.0
-margin_right = 136.0
-margin_bottom = 124.0
-custom_fonts/normal_font = SubResource( 1 )
+layout_mode = 0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 75.0
+offset_bottom = 77.0
+theme_override_fonts/normal_font = ExtResource("3_1rcl1")
+theme_override_font_sizes/normal_font_size = 80
 text = "K"
 
 [node name="L" type="Button" parent="GridContainer"]
-margin_left = 1060.0
-margin_top = 178.0
-margin_right = 1268.0
-margin_bottom = 352.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/L"]
-margin_left = 74.0
-margin_top = 57.0
-margin_right = 136.0
-margin_bottom = 124.0
-custom_fonts/normal_font = SubResource( 1 )
+layout_mode = 0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 75.0
+offset_bottom = 77.0
+theme_override_fonts/normal_font = ExtResource("3_1rcl1")
+theme_override_font_sizes/normal_font_size = 80
 text = "L"
 
 [node name="M" type="Button" parent="GridContainer"]
-margin_top = 356.0
-margin_right = 208.0
-margin_bottom = 530.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/M"]
-margin_left = 74.0
-margin_top = 57.0
-margin_right = 136.0
-margin_bottom = 124.0
-custom_fonts/normal_font = SubResource( 1 )
+layout_mode = 0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 75.0
+offset_bottom = 77.0
+theme_override_fonts/normal_font = ExtResource("3_1rcl1")
+theme_override_font_sizes/normal_font_size = 80
 text = "M"
 
 [node name="N" type="Button" parent="GridContainer"]
-margin_left = 212.0
-margin_top = 356.0
-margin_right = 420.0
-margin_bottom = 530.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/N"]
-margin_left = 74.0
-margin_top = 57.0
-margin_right = 136.0
-margin_bottom = 124.0
-custom_fonts/normal_font = SubResource( 1 )
+layout_mode = 0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 75.0
+offset_bottom = 77.0
+theme_override_fonts/normal_font = ExtResource("3_1rcl1")
+theme_override_font_sizes/normal_font_size = 80
 text = "N"
 
 [node name="O" type="Button" parent="GridContainer"]
-margin_left = 424.0
-margin_top = 356.0
-margin_right = 632.0
-margin_bottom = 530.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/O"]
-margin_left = 74.0
-margin_top = 57.0
-margin_right = 136.0
-margin_bottom = 124.0
-custom_fonts/normal_font = SubResource( 1 )
+layout_mode = 0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 75.0
+offset_bottom = 77.0
+theme_override_fonts/normal_font = ExtResource("3_1rcl1")
+theme_override_font_sizes/normal_font_size = 80
 text = "O"
 
 [node name="P" type="Button" parent="GridContainer"]
-margin_left = 636.0
-margin_top = 356.0
-margin_right = 844.0
-margin_bottom = 530.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/P"]
-margin_left = 74.0
-margin_top = 57.0
-margin_right = 136.0
-margin_bottom = 124.0
-custom_fonts/normal_font = SubResource( 1 )
+layout_mode = 0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 75.0
+offset_bottom = 77.0
+theme_override_fonts/normal_font = ExtResource("3_1rcl1")
+theme_override_font_sizes/normal_font_size = 80
 text = "P"
 
 [node name="Q" type="Button" parent="GridContainer"]
-margin_left = 848.0
-margin_top = 356.0
-margin_right = 1056.0
-margin_bottom = 530.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/Q"]
-margin_left = 74.0
-margin_top = 57.0
-margin_right = 136.0
-margin_bottom = 124.0
-custom_fonts/normal_font = SubResource( 1 )
+layout_mode = 0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 75.0
+offset_bottom = 77.0
+theme_override_fonts/normal_font = ExtResource("3_1rcl1")
+theme_override_font_sizes/normal_font_size = 80
 text = "Q"
 
 [node name="R" type="Button" parent="GridContainer"]
-margin_left = 1060.0
-margin_top = 356.0
-margin_right = 1268.0
-margin_bottom = 530.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/R"]
-margin_left = 74.0
-margin_top = 57.0
-margin_right = 136.0
-margin_bottom = 124.0
-custom_fonts/normal_font = SubResource( 1 )
+layout_mode = 0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 75.0
+offset_bottom = 77.0
+theme_override_fonts/normal_font = ExtResource("3_1rcl1")
+theme_override_font_sizes/normal_font_size = 80
 text = "R"
 
 [node name="S" type="Button" parent="GridContainer"]
-margin_top = 534.0
-margin_right = 208.0
-margin_bottom = 707.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/S"]
-margin_left = 74.0
-margin_top = 57.0
-margin_right = 136.0
-margin_bottom = 124.0
-custom_fonts/normal_font = SubResource( 1 )
+layout_mode = 0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 75.0
+offset_bottom = 77.0
+theme_override_fonts/normal_font = ExtResource("3_1rcl1")
+theme_override_font_sizes/normal_font_size = 80
 text = "S"
 
 [node name="T" type="Button" parent="GridContainer"]
-margin_left = 212.0
-margin_top = 534.0
-margin_right = 420.0
-margin_bottom = 707.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/T"]
-margin_left = 74.0
-margin_top = 57.0
-margin_right = 136.0
-margin_bottom = 124.0
-custom_fonts/normal_font = SubResource( 1 )
+layout_mode = 0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 75.0
+offset_bottom = 77.0
+theme_override_fonts/normal_font = ExtResource("3_1rcl1")
+theme_override_font_sizes/normal_font_size = 80
 text = "T"
 
 [node name="U" type="Button" parent="GridContainer"]
-margin_left = 424.0
-margin_top = 534.0
-margin_right = 632.0
-margin_bottom = 707.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/U"]
-margin_left = 74.0
-margin_top = 57.0
-margin_right = 136.0
-margin_bottom = 124.0
-custom_fonts/normal_font = SubResource( 1 )
+layout_mode = 0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 75.0
+offset_bottom = 77.0
+theme_override_fonts/normal_font = ExtResource("3_1rcl1")
+theme_override_font_sizes/normal_font_size = 80
 text = "U"
 
 [node name="V" type="Button" parent="GridContainer"]
-margin_left = 636.0
-margin_top = 534.0
-margin_right = 844.0
-margin_bottom = 707.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/V"]
-margin_left = 74.0
-margin_top = 57.0
-margin_right = 136.0
-margin_bottom = 124.0
-custom_fonts/normal_font = SubResource( 1 )
+layout_mode = 0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 75.0
+offset_bottom = 77.0
+theme_override_fonts/normal_font = ExtResource("3_1rcl1")
+theme_override_font_sizes/normal_font_size = 80
 text = "V"
 
 [node name="W" type="Button" parent="GridContainer"]
-margin_left = 848.0
-margin_top = 534.0
-margin_right = 1056.0
-margin_bottom = 707.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/W"]
-margin_left = 74.0
-margin_top = 57.0
-margin_right = 136.0
-margin_bottom = 124.0
-custom_fonts/normal_font = SubResource( 1 )
+layout_mode = 0
+offset_left = 6.0
+offset_top = 10.0
+offset_right = 68.0
+offset_bottom = 77.0
+theme_override_fonts/normal_font = ExtResource("3_1rcl1")
+theme_override_font_sizes/normal_font_size = 80
 text = "W"
 
 [node name="X" type="Button" parent="GridContainer"]
-margin_left = 1060.0
-margin_top = 534.0
-margin_right = 1268.0
-margin_bottom = 707.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/X"]
-margin_left = 74.0
-margin_top = 57.0
-margin_right = 136.0
-margin_bottom = 124.0
-custom_fonts/normal_font = SubResource( 1 )
+layout_mode = 0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 75.0
+offset_bottom = 77.0
+theme_override_fonts/normal_font = ExtResource("3_1rcl1")
+theme_override_font_sizes/normal_font_size = 80
 text = "X"
 
 [node name="Y" type="Button" parent="GridContainer"]
-margin_top = 711.0
-margin_right = 208.0
-margin_bottom = 884.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/Y"]
-margin_left = 74.0
-margin_top = 57.0
-margin_right = 136.0
-margin_bottom = 124.0
-custom_fonts/normal_font = SubResource( 1 )
+layout_mode = 0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 75.0
+offset_bottom = 77.0
+theme_override_fonts/normal_font = ExtResource("3_1rcl1")
+theme_override_font_sizes/normal_font_size = 80
 text = "Y"
 
 [node name="Z" type="Button" parent="GridContainer"]
-margin_left = 212.0
-margin_top = 711.0
-margin_right = 420.0
-margin_bottom = 884.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/Z"]
-margin_left = 74.0
-margin_top = 57.0
-margin_right = 136.0
-margin_bottom = 124.0
-custom_fonts/normal_font = SubResource( 1 )
+layout_mode = 0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 75.0
+offset_bottom = 77.0
+theme_override_fonts/normal_font = ExtResource("3_1rcl1")
+theme_override_font_sizes/normal_font_size = 80
 text = "Z"
 
 [node name="OK" type="Button" parent="GridContainer"]
-margin_left = 424.0
-margin_top = 711.0
-margin_right = 632.0
-margin_bottom = 884.0
+layout_mode = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/OK"]
-margin_left = 64.0
-margin_top = 57.0
-margin_right = 148.0
-margin_bottom = 124.0
-custom_fonts/normal_font = SubResource( 2 )
+layout_mode = 0
+offset_left = 4.0
+offset_top = 10.0
+offset_right = 88.0
+offset_bottom = 77.0
+theme_override_fonts/normal_font = ExtResource("3_1rcl1")
+theme_override_font_sizes/normal_font_size = 55
 text = "OK"
 
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(407.227, 83)
+scale = Vector2(0.359301, 0.363636)
+texture = ExtResource("2")
+
 [node name="Name Space" type="RichTextLabel" parent="."]
-margin_left = 336.0
-margin_top = 7.0
-margin_right = 1611.0
-margin_bottom = 139.0
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-custom_fonts/normal_font = SubResource( 3 )
-text = "Hello"
+offset_left = 185.0
+offset_top = 63.0
+offset_right = 625.0
+offset_bottom = 109.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_1rcl1")
+theme_override_font_sizes/normal_font_size = 48
+text = "helllo"
 scroll_active = false
 
-[node name="Sprite" type="Sprite" parent="Name Space"]
-show_behind_parent = true
-position = Vector2( 635, 67 )
-texture = ExtResource( 2 )
-
-[node name="letterCursor" parent="." instance=ExtResource( 3 )]
-position = Vector2( 429, 242 )
+[node name="letterCursor" parent="." instance=ExtResource("3")]
+position = Vector2(216, 506)

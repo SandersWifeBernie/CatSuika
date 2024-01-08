@@ -1,28 +1,27 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=5 format=3 uid="uid://boqvf4dakw1st"]
 
-[ext_resource path="res://art/Strawberry2.0.png" type="Texture" id=1]
-[ext_resource path="res://strawberry.gd" type="Script" id=2]
+[ext_resource type="Texture2D" uid="uid://8m1l3qp3ntb3" path="res://art/Strawberry2.0.png" id="1"]
+[ext_resource type="Script" path="res://strawberry.gd" id="2"]
 
-[sub_resource type="PhysicsMaterial" id=2]
+[sub_resource type="PhysicsMaterial" id="2"]
 bounce = 0.05
 
-[sub_resource type="CircleShape2D" id=1]
-radius = 22.0
+[sub_resource type="CircleShape2D" id="1"]
+radius = 16.0
 
 [node name="strawberry" type="RigidBody2D"]
 collision_layer = 5
 collision_mask = 5
 mass = 0.92
-physics_material_override = SubResource( 2 )
-gravity_scale = 10.0
+physics_material_override = SubResource("2")
 can_sleep = false
-script = ExtResource( 2 )
+script = ExtResource("2")
 
-[node name="Sprite" type="Sprite" parent="."]
-scale = Vector2( 0.28, 0.28 )
-texture = ExtResource( 1 )
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
+shape = SubResource("1")
 
 [connection signal="body_entered" from="." to="." method="_on_strawberry_body_entered"]

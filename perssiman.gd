@@ -3,30 +3,29 @@ extends RigidBody2D
 
 var isDropped 
 var count
+var fromCombine
 
 # pretty much the same as cherry
 
 func _ready():
 	self.count = 0
 	var dropZone = get_tree().current_scene.get_node("droppingArea")
-	dropZone.connect("body_entered", self, "_on_droppingArea_body_entered")
+	dropZone.body_entered.connect(_on_droppingArea_body_entered, CONNECT_ONE_SHOT)
 	self.isDropped = false
+	self.fromCombine = false
 	$".".set_contact_monitor(true)
 	$".".set_max_contacts_reported(100) 
 
 func _process(delta):
-	if self.isDropped == true and self.global_position.y < 277:
+	if self.isDropped == true and self.global_position.y < 150:
 		print(self.global_position.y)
-		get_tree().change_scene("res://gameOver.tscn")
-	if self.global_position.y > 850:
-		Global.setBoxOpen(false)
+		get_tree().change_scene_to_file("res://gameOver.tscn")
 
 func _on_droppingArea_body_entered(body):
 	self.count = self.count + 1
-	if self.isDropped == false and self.count == 1:
+	if self.isDropped == false and self.count == 1 and self.fromCombine == false:
 		self.isDropped = true
 		Global.setBoxOpen(false)
-		get_tree().current_scene.get_node("droppingArea").disconnect("body_entered", self, "_on_droppingArea_body_entered")
 
 
 func _on_perssiman_body_entered(body):
@@ -40,7 +39,7 @@ func _on_perssiman_body_entered(body):
 		#self.get_node("CollisionShape2D").disabled = true
 		#body.get_node("CollisionShape2D").disabled = true
 		var scene = load("res://apple.tscn")
-		var instance = scene.instance()
+		var instance = scene.instantiate()
 		# once we create a new instance we increment the cherry colli 
 		# we can add this to the current playing scene so that it will be destroyed at the right time 
 		get_tree().current_scene.add_child(instance)

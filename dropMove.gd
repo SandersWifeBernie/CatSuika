@@ -1,7 +1,7 @@
-extends KinematicBody2D
+extends CharacterBody2D
 # export lets you edit the value in the editor so you don't have to re write the number every time
 # 400 seems good since we don't want it going too fast
-export var speed = 300
+@export var speed = 300
 var numGenerator
 var isSpawn = false 
 
@@ -31,7 +31,7 @@ func _ready():
 	numGenerator = RandomNumberGenerator.new()
 	numGenerator.randomize()
 	var scene = load(self.getFruit())
-	var instance = scene.instance()
+	var instance = scene.instantiate()
 	instance.set_global_position(self.get_node("spawner").get_global_position())
 	get_tree().current_scene.call_deferred("add_child", instance)
 	
@@ -48,7 +48,7 @@ func _process(delta):
 		# orange or perssiman which gives us 5 cases 
 		# this is defined in the get fruit method
 		var scene = load(self.getFruit())
-		var instance = scene.instance()
+		var instance = scene.instantiate()
 		# then add instance to the tree
 		instance.set_position(self.get_node("spawner").get_global_position()) 
 		get_tree().current_scene.add_child(instance)
@@ -71,10 +71,14 @@ func _process(delta):
 		$".".get_node("bottom").disabled = true
 		Global.setBoxOpen(true)
 		isSpawn = true
+	if Input.is_action_just_pressed("back"):
+		# before we go back to main screen we should reset the score 
+		Global.score = 0
+		get_tree().change_scene_to_file("res://titleScreen.tscn")
 	if velocity.length() > 0: 
 		velocity = velocity.normalized() * speed
 	# after this we don't define anything for up and down since we only want the dropper to have horizontal movement 
 	position = velocity * delta + position 
 	# we can clamp the position to be the edges of the box, lemme find out what that is 
-	position.x = clamp(position.x, 5, 350)
+	position.x = clamp(position.x, 5, 115)
 	

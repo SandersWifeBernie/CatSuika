@@ -12,8 +12,8 @@ func _ready():
 
 
 func _process(delta):
-	if global_position.y < 277:
-		get_tree().change_scene("res://gameOver.tscn")
+	if global_position.y < 150:
+		get_tree().change_scene_to_file("res://gameOver.tscn")
 
 func _on_watermelon_body_entered(body):
 	if body.get_collision_layer() == 2049:

@@ -1,47 +1,59 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=8 format=3 uid="uid://j8ufttu4pn4u"]
 
-[ext_resource path="res://dropper.tscn" type="PackedScene" id=1]
-[ext_resource path="res://box.tscn" type="PackedScene" id=2]
-[ext_resource path="res://mainGame.gd" type="Script" id=3]
-[ext_resource path="res://droppingArea.tscn" type="PackedScene" id=4]
-[ext_resource path="res://art/MotleyForcesRegular-w1rZ3.ttf" type="DynamicFontData" id=5]
-
-[sub_resource type="DynamicFont" id=1]
-size = 64
-font_data = ExtResource( 5 )
-
-[sub_resource type="DynamicFont" id=2]
-size = 64
-font_data = ExtResource( 5 )
+[ext_resource type="PackedScene" uid="uid://3qkb68aviiig" path="res://dropper.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://c2kyetb41bm3e" path="res://box.tscn" id="2"]
+[ext_resource type="Texture2D" uid="uid://80iblsvwv6m" path="res://art/gamepage.png" id="2_yhkng"]
+[ext_resource type="Script" path="res://mainGame.gd" id="3"]
+[ext_resource type="Texture2D" uid="uid://u0diiobj4eqb" path="res://art/small_box.png" id="3_bbpnu"]
+[ext_resource type="PackedScene" uid="uid://pqnb4aou60pn" path="res://droppingArea.tscn" id="4"]
+[ext_resource type="FontFile" uid="uid://dd66u22iv8sfj" path="res://art/MotleyForcesRegular-w1rZ3.ttf" id="5"]
 
 [node name="mainGame" type="Node2D"]
-script = ExtResource( 3 )
+script = ExtResource("3")
 
-[node name="box" parent="." instance=ExtResource( 2 )]
-position = Vector2( 608, 277 )
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(400, 300)
+scale = Vector2(0.416, 0.556)
+texture = ExtResource("2_yhkng")
 
-[node name="dropper" parent="." instance=ExtResource( 1 )]
-position = Vector2( 610, 151 )
+[node name="pink_box" type="Sprite2D" parent="."]
+position = Vector2(404, 351.849)
+scale = Vector2(0.469412, 0.624306)
+texture = ExtResource("3_bbpnu")
 
-[node name="droppingArea" parent="." instance=ExtResource( 4 )]
-position = Vector2( 835, 323 )
+[node name="box" parent="." instance=ExtResource("2")]
+position = Vector2(304, 176)
+scale = Vector2(1.4, 1.92)
+
+[node name="dropper" parent="." instance=ExtResource("1")]
+position = Vector2(311, 77)
+
+[node name="droppingArea" parent="." instance=ExtResource("4")]
+position = Vector2(402, 185)
+scale = Vector2(3.56, 1)
 
 [node name="scoreDisplay" type="RichTextLabel" parent="."]
-margin_left = 99.0
-margin_top = 790.0
-margin_right = 493.0
-margin_bottom = 885.0
-rect_clip_content = false
-custom_colors/default_color = Color( 0.309804, 0.568627, 0.32549, 1 )
-custom_fonts/normal_font = SubResource( 1 )
+clip_contents = false
+offset_left = 59.0
+offset_top = 432.0
+offset_right = 453.0
+offset_bottom = 527.0
+theme_override_colors/default_color = Color(0.309804, 0.568627, 0.32549, 1)
+theme_override_colors/font_outline_color = Color(0.207843, 0.133333, 0.0313726, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/normal_font = ExtResource("5")
+theme_override_font_sizes/normal_font_size = 42
 text = "1963"
 
 [node name="scoreTitle" type="RichTextLabel" parent="."]
-margin_left = 89.0
-margin_top = 711.0
-margin_right = 396.0
-margin_bottom = 788.0
-rect_clip_content = false
-custom_colors/default_color = Color( 0.309804, 0.568627, 0.32549, 1 )
-custom_fonts/normal_font = SubResource( 2 )
+clip_contents = false
+offset_left = 38.0
+offset_top = 390.0
+offset_right = 173.0
+offset_bottom = 430.0
+theme_override_colors/default_color = Color(0.309804, 0.568627, 0.32549, 1)
+theme_override_colors/font_outline_color = Color(0.207843, 0.133333, 0.0313726, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/normal_font = ExtResource("5")
+theme_override_font_sizes/normal_font_size = 42
 text = "Score:"

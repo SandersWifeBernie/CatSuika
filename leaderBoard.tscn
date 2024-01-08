@@ -1,199 +1,219 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=4 format=3 uid="uid://7ee1tgjv82dy"]
 
-[ext_resource path="res://art/MotleyForcesRegular-w1rZ3.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://leaderBoard.gd" type="Script" id=2]
-[ext_resource path="res://art/Leader_board.png" type="Texture" id=3]
-
-[sub_resource type="DynamicFont" id=1]
-size = 67
-outline_size = 5
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 1 )
-
-[sub_resource type="DynamicFont" id=2]
-size = 100
-outline_size = 12
-outline_color = Color( 0.207843, 0.133333, 0.0313726, 1 )
-font_data = ExtResource( 1 )
-
-[sub_resource type="DynamicFont" id=3]
-size = 70
-outline_size = 6
-outline_color = Color( 0.207843, 0.133333, 0.0313726, 1 )
-font_data = ExtResource( 1 )
-
-[sub_resource type="DynamicFont" id=4]
-size = 50
-outline_size = 5
-outline_color = Color( 0.207843, 0.133333, 0.0313726, 1 )
-font_data = ExtResource( 1 )
+[ext_resource type="FontFile" uid="uid://dd66u22iv8sfj" path="res://art/MotleyForcesRegular-w1rZ3.ttf" id="1"]
+[ext_resource type="Script" path="res://leaderBoard.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://codnqfuss3c5w" path="res://art/Leader_board.png" id="3"]
 
 [node name="leaderBoard" type="Node"]
-script = ExtResource( 2 )
+script = ExtResource("2")
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 962, 538 )
-texture = ExtResource( 3 )
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(400, 300)
+scale = Vector2(0.416, 0.556)
+texture = ExtResource("3")
 
 [node name="firstName" type="RichTextLabel" parent="."]
-margin_left = 171.0
-margin_top = 98.0
-margin_right = 513.0
-margin_bottom = 181.0
-rect_clip_content = false
+clip_contents = false
+offset_left = 72.0
+offset_top = 102.0
+offset_right = 192.0
+offset_bottom = 130.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_colors/default_color = Color( 0.309804, 0.568627, 0.32549, 1 )
-custom_fonts/normal_font = SubResource( 1 )
+theme_override_colors/default_color = Color(0.309804, 0.568627, 0.32549, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/normal_font = ExtResource("1")
+theme_override_font_sizes/normal_font_size = 28
 text = "1. Elisha"
 scroll_active = false
 
 [node name="firstScore" type="RichTextLabel" parent="."]
-margin_left = 519.0
-margin_top = 91.0
-margin_right = 901.0
-margin_bottom = 202.0
-rect_clip_content = false
+clip_contents = false
+offset_left = 218.0
+offset_top = 102.0
+offset_right = 309.0
+offset_bottom = 127.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_colors/default_color = Color( 0.309804, 0.568627, 0.32549, 1 )
-custom_fonts/normal_font = SubResource( 1 )
+theme_override_colors/default_color = Color(0.309804, 0.568627, 0.32549, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 11
+theme_override_fonts/normal_font = ExtResource("1")
+theme_override_font_sizes/normal_font_size = 28
 text = "150000"
 scroll_active = false
 
 [node name="secondName" type="RichTextLabel" parent="."]
-margin_left = 170.0
-margin_top = 283.0
-margin_right = 526.0
-margin_bottom = 362.0
-rect_clip_content = false
+clip_contents = false
+offset_left = 73.0
+offset_top = 200.0
+offset_right = 206.0
+offset_bottom = 237.0
+rotation = 0.064805
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_colors/default_color = Color( 0.309804, 0.568627, 0.32549, 1 )
-custom_fonts/normal_font = SubResource( 1 )
+theme_override_colors/default_color = Color(0.309804, 0.568627, 0.32549, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/normal_font = ExtResource("1")
+theme_override_font_sizes/normal_font_size = 28
 text = "2. hello0"
 scroll_active = false
 
 [node name="secondScore" type="RichTextLabel" parent="."]
-margin_left = 513.0
-margin_top = 288.0
-margin_right = 923.0
-margin_bottom = 412.0
-rect_clip_content = false
+clip_contents = false
+offset_left = 216.0
+offset_top = 212.0
+offset_right = 326.0
+offset_bottom = 240.0
+rotation = 0.0566742
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_colors/default_color = Color( 0.309804, 0.568627, 0.32549, 1 )
-custom_fonts/normal_font = SubResource( 1 )
+theme_override_colors/default_color = Color(0.309804, 0.568627, 0.32549, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/normal_font = ExtResource("1")
+theme_override_font_sizes/normal_font_size = 28
 text = "645000"
 scroll_active = false
 
 [node name="thirdName" type="RichTextLabel" parent="."]
-margin_left = 172.0
-margin_top = 477.0
-margin_right = 471.0
-margin_bottom = 602.0
-rect_clip_content = false
+clip_contents = false
+offset_left = 72.0
+offset_top = 328.0
+offset_right = 202.0
+offset_bottom = 363.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_colors/default_color = Color( 0.309804, 0.568627, 0.32549, 1 )
-custom_fonts/normal_font = SubResource( 1 )
+theme_override_colors/default_color = Color(0.309804, 0.568627, 0.32549, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/normal_font = ExtResource("1")
+theme_override_font_sizes/normal_font_size = 28
 text = "3. helloo"
 scroll_active = false
 
 [node name="thirdScore" type="RichTextLabel" parent="."]
-margin_left = 519.0
-margin_top = 479.0
-margin_right = 780.0
-margin_bottom = 609.0
-rect_clip_content = false
+clip_contents = false
+offset_left = 216.0
+offset_top = 328.0
+offset_right = 341.0
+offset_bottom = 357.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_colors/default_color = Color( 0.309804, 0.568627, 0.32549, 1 )
-custom_fonts/normal_font = SubResource( 1 )
+theme_override_colors/default_color = Color(0.309804, 0.568627, 0.32549, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/normal_font = ExtResource("1")
+theme_override_font_sizes/normal_font_size = 28
 text = "150000"
 scroll_active = false
 
 [node name="fourthName" type="RichTextLabel" parent="."]
-margin_left = 174.0
-margin_top = 684.0
-margin_right = 490.0
-margin_bottom = 789.0
-rect_clip_content = false
+clip_contents = false
+offset_left = 69.0
+offset_top = 449.0
+offset_right = 206.0
+offset_bottom = 476.0
+rotation = -0.195773
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_colors/default_color = Color( 0.309804, 0.568627, 0.32549, 1 )
-custom_fonts/normal_font = SubResource( 1 )
+theme_override_colors/default_color = Color(0.309804, 0.568627, 0.32549, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/normal_font = ExtResource("1")
+theme_override_font_sizes/normal_font_size = 28
 text = "4. helloo"
 scroll_active = false
 
 [node name="fourthScore" type="RichTextLabel" parent="."]
-margin_left = 527.0
-margin_top = 678.0
-margin_right = 769.0
-margin_bottom = 741.0
-rect_clip_content = false
+clip_contents = false
+offset_left = 215.0
+offset_top = 420.0
+offset_right = 339.0
+offset_bottom = 445.0
+rotation = -0.203356
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_colors/default_color = Color( 0.309804, 0.568627, 0.32549, 1 )
-custom_fonts/normal_font = SubResource( 1 )
+theme_override_colors/default_color = Color(0.309804, 0.568627, 0.32549, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/normal_font = ExtResource("1")
+theme_override_font_sizes/normal_font_size = 28
 text = "150000"
 scroll_active = false
 
 [node name="fifthName" type="RichTextLabel" parent="."]
-margin_left = 171.0
-margin_top = 947.0
-margin_right = 459.0
-margin_bottom = 1032.0
-rect_clip_content = false
+clip_contents = false
+offset_left = 72.0
+offset_top = 538.0
+offset_right = 212.0
+offset_bottom = 571.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_colors/default_color = Color( 0.309804, 0.568627, 0.32549, 1 )
-custom_fonts/normal_font = SubResource( 1 )
+theme_override_colors/default_color = Color(0.309804, 0.568627, 0.32549, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/normal_font = ExtResource("1")
+theme_override_font_sizes/normal_font_size = 28
 text = "5. hhello"
 scroll_active = false
 
 [node name="fifthScore" type="RichTextLabel" parent="."]
-margin_left = 523.0
-margin_top = 935.0
-margin_right = 859.0
-margin_bottom = 1010.0
-rect_clip_content = false
+clip_contents = false
+offset_left = 215.0
+offset_top = 538.0
+offset_right = 551.0
+offset_bottom = 613.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_colors/default_color = Color( 0.309804, 0.568627, 0.32549, 1 )
-custom_fonts/normal_font = SubResource( 1 )
+theme_override_colors/default_color = Color(0.309804, 0.568627, 0.32549, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/normal_font = ExtResource("1")
+theme_override_font_sizes/normal_font_size = 28
 text = "156251"
 scroll_active = false
 
-[node name="Title" type="RichTextLabel" parent="."]
-margin_left = 1177.0
-margin_top = 182.0
-margin_right = 1576.0
-margin_bottom = 354.0
-rect_clip_content = false
-custom_colors/default_color = Color( 0.309804, 0.568627, 0.32549, 1 )
-custom_fonts/normal_font = SubResource( 2 )
-text = "  Calico
-Combine"
-
 [node name="leaderBoardText" type="RichTextLabel" parent="."]
-margin_left = 1174.0
-margin_top = 377.0
-margin_right = 1676.0
-margin_bottom = 478.0
-rect_clip_content = false
-custom_colors/default_color = Color( 0.309804, 0.568627, 0.32549, 1 )
-custom_fonts/normal_font = SubResource( 3 )
+clip_contents = false
+offset_left = 477.0
+offset_top = 215.0
+offset_right = 979.0
+offset_bottom = 316.0
+theme_override_colors/default_color = Color(0.309804, 0.568627, 0.32549, 1)
+theme_override_colors/font_outline_color = Color(0.207843, 0.133333, 0.0313726, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/normal_font = ExtResource("1")
+theme_override_font_sizes/normal_font_size = 32
 text = "LeaderBoard"
 
 [node name="pressStart" type="RichTextLabel" parent="."]
-margin_left = 1106.0
-margin_top = 629.0
-margin_right = 1658.0
-margin_bottom = 727.0
-rect_clip_content = false
-custom_colors/default_color = Color( 0.309804, 0.568627, 0.32549, 1 )
-custom_fonts/normal_font = SubResource( 4 )
+clip_contents = false
+offset_left = 399.0
+offset_top = 283.0
+offset_right = 1006.0
+offset_bottom = 389.0
+theme_override_colors/default_color = Color(0.309804, 0.568627, 0.32549, 1)
+theme_override_colors/font_outline_color = Color(0.207843, 0.133333, 0.0313726, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/normal_font = ExtResource("1")
+theme_override_font_sizes/normal_font_size = 34
 text = "Press \"Blue\" to return 
 			to main menu"
 scroll_active = false
+
+[node name="Title" type="RichTextLabel" parent="."]
+clip_contents = false
+offset_left = 454.0
+offset_top = 89.0
+offset_right = 689.0
+offset_bottom = 204.0
+theme_override_colors/default_color = Color(0.309804, 0.568627, 0.32549, 1)
+theme_override_colors/font_outline_color = Color(0.207843, 0.133333, 0.0313726, 1)
+theme_override_constants/outline_size = 35
+theme_override_fonts/normal_font = ExtResource("1")
+theme_override_font_sizes/normal_font_size = 58
+text = "  Calico
+  Combo"

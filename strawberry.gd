@@ -1,33 +1,32 @@
 extends RigidBody2D
 
 var isDropped 
-
+var fromCombine
 var count
 # pretty much the same as cherry
 
 func _ready():
 	self.count = 0
 	var dropZone = get_tree().current_scene.get_node("droppingArea")
-	dropZone.connect("body_entered", self, "_on_droppingArea_body_entered")
+	dropZone.body_entered.connect(_on_droppingArea_body_entered, CONNECT_ONE_SHOT)
 	self.isDropped = false
 	$".".set_contact_monitor(true)
-	$".".set_max_contacts_reported(100) 
+	$".".set_max_contacts_reported(100)
+	# set from combine to be false
+	self.fromCombine = false # if it is from a combination then we'll overwrite this value to true in the signal  
 
 func _process(delta):
-	if self.isDropped == true and self.global_position.y < 277:
+	if self.isDropped == true and self.global_position.y < 150:
 		print(self.global_position.y)
-		get_tree().change_scene("res://gameOver.tscn")
-	if self.global_position.y > 850:
-		Global.setBoxOpen(false)
+		get_tree().change_scene_to_file("res://gameOver.tscn")
+	
 
 func _on_droppingArea_body_entered(body):
 	
 	self.count = self.count + 1
-	if self.isDropped == false and self.count == 1:
+	if self.isDropped == false and self.count == 1 and self.fromCombine == false:
 		self.isDropped = true
 		Global.setBoxOpen(false)
-		get_tree().current_scene.get_node("droppingArea").disconnect("body_entered", self, "_on_droppingArea_body_entered")
-		
 
 
 func _on_strawberry_body_entered(body):
@@ -38,10 +37,12 @@ func _on_strawberry_body_entered(body):
 		body.set_contact_monitor(false)
 		
 		var scene = load("res://grape.tscn")
-		var instance = scene.instance()
+		var instance = scene.instantiate()
+		
 		# we can add this to the current playing scene so that it will be destroyed at the right time 
 		get_tree().current_scene.add_child(instance)
 		Global.setScore(Global.getScore() + 4)
+		instance.fromCombine = true
 		# once it's been added to the scene we need to set it to the proper coordinates 
 		instance.set_position(newPosition)
 		

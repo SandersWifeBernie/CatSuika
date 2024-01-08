@@ -10,8 +10,8 @@ var scoreArr = [0, 0, 0, 0, 0, 0]
 var nameArr 
 
 func loadWriteScores():
-	var scoreFile = File.new() # initialize file object 
-	scoreFile.open(scoreFilePath, File.READ)
+	var scoreFile = FileAccess.open(scoreFilePath, FileAccess.READ) # initialize file object 
+	
 	# now have the whole score file as a single string
 	var scoreListStr = scoreFile.get_as_text()
 	# close this file, since we're done reading for now
@@ -28,8 +28,8 @@ func loadWriteScores():
 		i = i + 1 
 
 	# now we're gonna read from the names 
-	var nameFile = File.new()
-	nameFile.open(nameFilePath, File.READ)
+	var nameFile = FileAccess.open(nameFilePath, FileAccess.READ)
+	
 	var nameListStr = nameFile.get_as_text()
 	nameFile.close()
 	# created an array for the names
@@ -52,17 +52,17 @@ func loadWriteScores():
 	
 	# now we want to open to new files with write privileges and write these new values onto the corresponding files
 	# open the score file 
-	scoreFile = File.new()
-	scoreFile.open(scoreFilePath, File.WRITE)
+	scoreFile = FileAccess.open(scoreFilePath, FileAccess.WRITE)
+	
 	# open the file containing names 
-	nameFile = File.new()
-	nameFile.open(nameFilePath, File.WRITE)
+	nameFile = FileAccess.open(nameFilePath, FileAccess.WRITE)
+	
 	
 	# loop through one more time baby 
 	i = 0 
 	while i < 5:
 		# store the correspondind scores and names onto the file in order  
-		scoreFile.store_string(String(scoreArr[i]) + "\n")
+		scoreFile.store_string(str(scoreArr[i]) + "\n")
 		nameFile.store_string(nameArr[i] + "\n")
 		i = i + 1
 	# we close our files like the good boys we are
@@ -80,15 +80,15 @@ func _ready():
 	self.get_node("fourthName").set_text("4. " + nameArr[3])
 	self.get_node("fifthName").set_text("5. " + nameArr[4])
 	# set the text of the scores 
-	self.get_node("firstScore").set_text(String(scoreArr[0]))
-	self.get_node("secondScore").set_text(String(scoreArr[1]))
-	self.get_node("thirdScore").set_text(String(scoreArr[2]))
-	self.get_node("fourthScore").set_text(String(scoreArr[3]))
-	self.get_node("fifthScore").set_text(String(scoreArr[4]))
+	self.get_node("firstScore").set_text(str(scoreArr[0]))
+	self.get_node("secondScore").set_text(str(scoreArr[1]))
+	self.get_node("thirdScore").set_text(str(scoreArr[2]))
+	self.get_node("fourthScore").set_text(str(scoreArr[3]))
+	self.get_node("fifthScore").set_text(str(scoreArr[4]))
 	
 func _process(delta):
 	if Input.is_action_just_pressed("accept"):
 		Global.score = 0 
 		Global.playerName = ""
-		get_tree().change_scene("res://titleScreen.tscn")
+		get_tree().change_scene_to_file("res://titleScreen.tscn")
 

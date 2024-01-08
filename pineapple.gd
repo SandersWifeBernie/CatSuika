@@ -13,8 +13,8 @@ func _ready():
 
 
 func _process(delta):
-	if global_position.y < 277:
-		get_tree().change_scene("res://gameOver.tscn")
+	if global_position.y < 150:
+		get_tree().change_scene_to_file("res://gameOver.tscn")
 
 
 func _on_pineapple_body_entered(body):
@@ -25,7 +25,7 @@ func _on_pineapple_body_entered(body):
 		body.set_contact_monitor(false)
 		
 		var scene = load("res://melon.tscn")
-		var instance = scene.instance()
+		var instance = scene.instantiate()
 		# we can add this to the current playing scene so that it will be destroyed at the right time 
 		get_tree().current_scene.add_child(instance)
 		Global.setScore(Global.getScore() + 730)
