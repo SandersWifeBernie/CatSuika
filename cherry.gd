@@ -10,15 +10,17 @@ func _ready():
 	# connect the cherry to the droput zone 
 	var dropZone = get_tree().current_scene.get_node("droppingArea")
 	# this should make the connection disconnect after the signal is sent
-	dropZone.body_entered.connect(_on_droppingArea_body_entered, CONNECT_ONE_SHOT)
 	self.isDropped = false
 	$".".set_contact_monitor(true)
 	$".".set_max_contacts_reported(100)
 	
 # process is checked roughly every frame
 func _process(delta):
-	if self.isDropped == true and self.global_position.y < 150:
+	if self.isDropped == true and self.global_position.y < 176:
 		get_tree().change_scene_to_file("res://gameOver.tscn")
+	elif self.global_position.y >= 176 and self.isDropped == false:
+		self.isDropped = true
+		Global.setBoxOpen(false)
 
 
 func _on_cherry_body_entered(body):
@@ -40,17 +42,7 @@ func _on_cherry_body_entered(body):
 		get_tree().current_scene.add_child(instance)
 		# in the event that the combination is successful we want to update the score 
 		Global.setScore(Global.getScore() + 2)
-		instance.fromCombine = true
 		# once it's been added to the scene we need to set it to the proper coordinates 
 		instance.set_position(newPosition)
 		body.queue_free()
 		self.queue_free()
-
-
-func _on_droppingArea_body_entered(body):
-	self.count = self.count + 1
-	if self.isDropped == false and self.count == 1:
-		self.isDropped = true
-		Global.setBoxOpen(false)
-		
-		

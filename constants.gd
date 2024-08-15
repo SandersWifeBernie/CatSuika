@@ -16,6 +16,12 @@ func _ready():
 	score = 0
 	playerName = ""
 
+func _process(delta):
+	#we want to make the loop the music more seamlessly and add more of it
+	
+	return true
+
+
 func updateCherry():
 	cherryCollision = cherryCollision + 1
 

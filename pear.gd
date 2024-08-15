@@ -12,7 +12,7 @@ func _ready():
 
 
 func _process(delta):
-	if global_position.y < 150:
+	if global_position.y < 176:
 		get_tree().change_scene_to_file("res://gameOver.tscn")
 
 

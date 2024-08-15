@@ -7,31 +7,21 @@ extends RigidBody2D
 
 var isDropped 
 var count
-var fromCombine
 # pretty much the same as cherry
 
 func _ready():
 	self.count = 0
-	var dropZone = get_tree().current_scene.get_node("droppingArea")
-	dropZone.body_entered.connect(_on_droppingArea_body_entered, CONNECT_ONE_SHOT)
 	self.isDropped = false
-	self.fromCombine = false
+	
 	$".".set_contact_monitor(true)
 	$".".set_max_contacts_reported(100) 
 
 func _process(delta):
-	if self.isDropped == true and self.global_position.y < 150:
-		print(self.global_position.y)
+	if self.isDropped == true and self.global_position.y < 176:
 		get_tree().change_scene_to_file("res://gameOver.tscn")
-
-
-func _on_droppingArea_body_entered(body):
-	self.count = self.count + 1
-	
-	if self.isDropped == false and self.count == 1 and self.fromCombine == false:
+	elif self.isDropped == false and self.global_position.y >= 176:
 		self.isDropped = true
 		Global.setBoxOpen(false)
-		
 
 
 func _on_orange_body_entered(body):
@@ -52,7 +42,6 @@ func _on_orange_body_entered(body):
 		# we can add this to the current playing scene so that it will be destroyed at the right time 
 		get_tree().current_scene.add_child(instance)
 		Global.setScore(Global.getScore() + 16)
-		instance.fromCombine = true
 		# once it's been added to the scene we need to set it to the proper coordinates 
 		instance.set_position(newPosition)
 		body.queue_free()
