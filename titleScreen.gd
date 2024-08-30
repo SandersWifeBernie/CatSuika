@@ -25,7 +25,7 @@ func _ready():
 			count = count + 1
 		fileName.close()
 		fileScore.close()
-		print("balls")
+		
 	
 
 func _process(delta):
