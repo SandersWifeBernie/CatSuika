@@ -16,4 +16,3 @@ func _process(delta):
 	elif get_tree().get_current_scene().name == "mainGame" and self.playing == false:
 		self.play(0.0)
 		self.playing = true
-		

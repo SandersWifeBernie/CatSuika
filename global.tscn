@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://1al72jkkp0sh"]
 
 [ext_resource type="Script" path="res://constants.gd" id="1"]
-[ext_resource type="AudioStream" uid="uid://dtba83thyenwp" path="res://music/Meow.mp3" id="2_owhgu"]
+[ext_resource type="AudioStream" uid="uid://dceisi6plveyp" path="res://music/Meow_Final.mp3" id="2_yorgv"]
 [ext_resource type="Script" path="res://gameloopAudio.gd" id="3_udhj1"]
 [ext_resource type="AudioStream" uid="uid://oeioohavkug8" path="res://music/TitleTheme.mp3" id="4_wgp2d"]
 [ext_resource type="Script" path="res://TitlePlayer.gd" id="5_mp1g0"]
@@ -10,7 +10,7 @@
 script = ExtResource("1")
 
 [node name="gameloopAudio" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_owhgu")
+stream = ExtResource("2_yorgv")
 volume_db = -1.0
 script = ExtResource("3_udhj1")
 
